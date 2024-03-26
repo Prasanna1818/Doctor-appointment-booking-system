@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Appointments</title>
+</head>
+<style>
+    body {
+    margin: 20px;
+    padding: 20px;
+}
+body, table, th, td {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+form {
+    margin-bottom: 20px;
+}
+table {
+    width: 80%;
+    margin: 0 auto;
+}
+table {
+    border-spacing: 10px;
+    border-collapse: collapse;
+}
+th {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+td {
+    padding: 10px;
+    background-color: #ffffff;
+}
+tr:nth-child(odd) td {
+    background-color: #f9f9f9;
+}
+</style>
+<body>
+    <h1>Appointments</h1>
+    <form action="/search" method="post">
+    </form>
+    <br>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Timeslot</th>
+            <th>Department</th>
+        </tr>
+        {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment[0] }}</td>
+                <td>{{ appointment[1] }}</td>
+                <td>{{ appointment[2] }}</td>
+                <td>{{ appointment[3] }}</td>
+                <td>{{ appointment[4] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

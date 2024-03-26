@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Appointment Form</title>
+<style>
+h1
+{
+        text-align: center;
+}
+body
+{
+background-image: url("https://media.istockphoto.com/id/1137049930/photo/stethoscope-or-phonendoscope-on-a-doctors-white-desk-on-cloudy-morning-treatment-of-cold-or.jpg?s=612x612&w=0&k=20&c=H-teNt3is2cltZKlWDx2lXRMhkNyL_Y2-cf07tNGtOQ=");
+background-size: cover;
+}
+</style>
+</head>
+<body>
+<h1 >Appointment Form</h1>
+<form action="/http" method="post">
+<ol>
+<table align="center" cellspacing="40" border="5px">
+<tr>
+<td><b><li>Name:</li></b></td>
+<td><input type="text" name="Name"></td>
+</tr>
+<tr>
+    <td><b><li>Age:</li></b></td>
+    <td><input type="text" name="Age" id="ageInput" required></td>
+    <td><span id="ageError" style="color: red;"></span></td>
+  </tr>
+  
+  <script>
+    const ageInput = document.getElementById("ageInput");
+    const ageError = document.getElementById("ageError");
+  
+    ageInput.addEventListener("input", function () {
+      const userAge = parseInt(ageInput.value);
+  
+      if (isNaN(userAge) || userAge < 6 || userAge > 119) {
+        ageError.textContent = "Invalid age. Please enter an age between 6 and 119.";
+        ageInput.setCustomValidity("Invalid age.");
+      } else {
+        ageError.textContent = "";
+        ageInput.setCustomValidity("");
+      }
+    });
+  </script>
+  
+<tr>
+<td><b><li>Gender:</li></b></td>
+<td><input type="radio" name="Gender" value="Male" required />Male </td>
+<td><input type="radio" name="Gender" value="Female" required />Female</td>
+</tr>
+<tr>
+<td><b><li>Date:</li></b></td>
+<td><input type="Date" name="Date" required>
+</tr>
+<tr>
+   <td><b><li>Time Slot:</li></b></td>
+   <td><input type="radio" name="Timeslot" value="9am-11am" required/>9am-11am</td>
+   <td><input type="radio" name="Timeslot" value="11am-12pm" required/>11am-12pm</td>
+        <td><input type="radio" name="Timeslot" value="2pm-4pm" required/>2pm-4pm</td>
+        <td><input type="radio" name="Timeslot" value="3pm-5pm" required/>3pm-5pm</td>
+        <tr>
+            <td><b><li>Department of Doctor:</li></b></td>
+            <td><input type="radio" name="Department" value="Cardiology"/>Cardiologist</td>
+            <td><input type="radio" name="Department" value="Neurology"/>Neurologist</td>
+            <td><input type="radio" name="Department" value="Dermatology"/>Dermatologist</td>
+            <td><input type="radio" name="Department" value="Pediatrician"/>Pediatrician</td>
+            <td><input type="radio" name="Department" value="Gynec"/>Gynecologist</td>      
+          </tr>
+          
+    <tr>
+    <td align="center"><input type="Submit" name="Submit" required></td>
+    </tr>
+</table>
+</ol>
+</form>
+</body>
+</html>
+

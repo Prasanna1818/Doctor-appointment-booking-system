@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Doctor Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .doctor-details {
+      display: none;
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .doctor-details h3 {
+      color: #555;
+    }
+    .doctor-details p {
+      margin: 10px 0;
+      color: #777;
+    }
+    .doctor-details img {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Appointed Doctor Details</h1>
+  
+  
+  <div class="doctor-details">
+    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Doctor 1">
+    <h3>Doctor 1</h3>
+    <p>Name: Dr. John Doe</p>
+    <p>Specialty: Cardiologist</p>
+    <p>Location: Kakinada</p>
+    <p>Contact: 123-456-7890</p>
+    <p>Experience: 10 years</p>
+  </div>
+  
+  <div class="doctor-details">
+    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Doctor 2">
+    <h3>Doctor 2</h3>
+    <p>Name: Dr. Jane Smith</p>
+    <p>Specialty: Pediatrics</p>
+    <p>Location: vizag</p>
+    <p>Contact: 987-654-3210</p>
+    <p>Experience: 8 years</p>
+  </div>
+  
+  <div class="doctor-details">
+    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Doctor 3">
+    <h3>Doctor 3</h3>
+    <p>Name: Dr. kumar</p>
+    <p>Specialty: Dermatologist</p>
+    <p>Location: Kakinada</p>
+    <p>Contact: 555-123-4567</p>
+    <p>Experience: 12 years</p>
+  </div>
+
+  <div class="doctor-details">
+    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Doctor 3">
+    <h3>Doctor 4</h3>
+    <p>Name: Dr. krishna</p>
+    <p>Specialty: Gynecologist</p>
+    <p>Location: Kakinada</p>
+    <p>Contact: 555-123-4567</p>
+    <p>Experience: 12 years</p>
+  </div>
+
+  <div class="doctor-details">
+    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Doctor 3">
+    <h3>Doctor 4</h3>
+    <p>Name: Dr. David Johnson</p>
+    <p>Specialty: Neurologist</p>
+    <p>Location: vizag</p>
+    <p>Contact: 555-123-4567</p>
+    <p>Experience: 12 years</p>
+  </div>
+  
+  <!-- Add more doctor details here -->
+  
+  <script>
+    // Randomly display one doctor details
+    var doctorDetails = document.querySelectorAll('.doctor-details');
+    var randomIndex = Math.floor(Math.random() * doctorDetails.length);
+    doctorDetails[randomIndex].style.display = 'block';
+  </script>
+</body>
+</html>

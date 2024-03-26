@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Submit</title>
+    </head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url(7.jpg);
+    backface-visibility:inherit;
+  }
+  
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+  }
+  
+  form {
+    display: inline-block;
+  }
+  
+  form:first-child {
+    margin-right: 20px;
+  }
+  
+  button {
+    display: block;
+    position: center;
+    margin: 20px ;
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+    </style>
+    <body>
+        <div>
+            <h1>Succesfully Submited</h1>
+            <form action="/">
+                <button type="submit">Home</button>
+            </form>
+            <form action="/search"  method="POST">
+                <button type="submit">View Appointments</button>
+            </form>
+        </div>
+    </body>
+</html>
